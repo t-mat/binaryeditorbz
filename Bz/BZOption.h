@@ -238,7 +238,12 @@ public:
     t.Replace(_T("\r"), _T("\\r"));
     t.Replace(_T("\n"), _T("\\n"));
     CStringA str;
+#if defined(_MSC_VER) && (_MSC_VER <= 1900)	// VS 2015 or earlier
     str.Format("%s = \"%s\"\n", name, CT2A(val, CP_UTF8));
+#else
+    //https://docs.microsoft.com/en-us/cpp/cpp-conformance-improvements-2017
+    str.Format("%s = \"%s\"\n", name, static_cast<const char*>(CT2A(val, CP_UTF8)));
+#endif
     return file.Write(((LPVOID)(LPCSTR)(str)), str.GetLength());
   }
 

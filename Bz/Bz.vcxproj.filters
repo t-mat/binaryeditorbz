@@ -13,6 +13,9 @@
       <UniqueIdentifier>{91156cce-771f-403e-87e6-9875432a37e6}</UniqueIdentifier>
       <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
     </Filter>
+    <Filter Include="Source Files\zlib">
+      <UniqueIdentifier>{da3fc6f4-1aa7-4797-99bd-11eaa2d39703}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BZ.cpp">
@@ -71,6 +74,24 @@
     </ClCompile>
     <ClCompile Include="tamasplit.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\zlib.c">
+      <Filter>Source Files\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\zlib-crc32.c">
+      <Filter>Source Files\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\zlib-infback.c">
+      <Filter>Source Files\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\zlib-inffast.c">
+      <Filter>Source Files\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\zlib-inflate.c">
+      <Filter>Source Files\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\zlib-inftrees.c">
+      <Filter>Source Files\zlib</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
