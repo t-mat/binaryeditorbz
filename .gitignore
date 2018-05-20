@@ -9,6 +9,8 @@ Bz/Debug/
 *.opensdf
 *.sdf
 *.user
+*.suo
+.vs/
 Bz/Release64/
 Bz/Debug64/
 Bz/ipch/
