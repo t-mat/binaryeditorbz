@@ -45,6 +45,17 @@ extern WTL::CAppModule _Module;
 #include <atlscrl.h>
 #include <atlprint.h>
 
+#if defined(_WTL_VER) && ((_WTL_VER) >= 0x1000)
+// Since WTL::CPoint, WTL::CRect and WTL::CSize are removed from WTL10,
+// we must add them.  See also "Announcing start of WTL10"
+// https://sourceforge.net/p/wtl/discussion/374433/thread/e92e8fe6/?limit=25
+namespace WTL {
+    typedef ::CPoint CPoint;    // atltypes.h : CPoint
+    typedef ::CRect CRect;      // atltypes.h : CPoint
+    typedef ::CSize CSize;      // atltypes.h : CPoint
+}
+#endif
+
 #include "TreeListView.h"
 
 #include <shlobj.h>
